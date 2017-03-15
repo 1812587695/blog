@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"blog/models"
-
+	"fmt"
 	"time"
 
 	"github.com/astaxie/beego"
@@ -20,8 +20,7 @@ func (this *PhotoController) Get() {
 	photo.Des = "山东省地方水电费"
 	photo.Posttime = time.Now()
 	photo.Url = "http://www.baidu.com"
-	photo.Insert()
-	//	if err := photo.Insert(); err != nil {
-	//		this.showmsg(err.Error())
-	//	}
+
+	id, err := photo.Insert()
+	fmt.Printf("NUM: %d, ERR: %v\n", id, err)
 }

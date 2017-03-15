@@ -20,11 +20,12 @@ type Photo struct {
 //	return TableName("photo")
 //}
 
-func (m *Photo) Insert() error {
-	if _, err := orm.NewOrm().Insert(m); err != nil {
-		return err
+func (m *Photo) Insert() (int64, error) {
+	id, err := orm.NewOrm().Insert(m)
+	if err != nil {
+		return id, err
 	}
-	return nil
+	return id, nil
 }
 
 func (m *Photo) Read(fields ...string) error {
