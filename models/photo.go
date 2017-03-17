@@ -1,6 +1,8 @@
 package models
 
 import (
+	//	"fmt"
+	//	"strconv"
 	"time"
 
 	"github.com/astaxie/beego/orm"
@@ -22,35 +24,51 @@ type Photo struct {
 
 func (m *Photo) Insert() (int64, error) {
 	id, err := orm.NewOrm().Insert(m)
+	//	if err != nil {
+	//		return id, err
+	//	}
+	return id, err
+}
+
+func GetAllPhoto() ([]*Photo, error) {
+	o := orm.NewOrm()
+	photo := make([]*Photo, 0)
+	qs := o.QueryTable("photo")
+	_, err := qs.All(&photo) // 返回总数量和错误信息
+	//	fmt.Println("111111111111111111111111111111111111")
+	//	fmt.Println(a)
+	return photo, err
+}
+
+func GetOnePhoto() (*Photo, error) {
+	//	o := orm.NewOrm()
+	//	photo := make([]*Photo, 0)
+	//	err := o.QueryTable("photo").Filter("id", 1).One(&photo)
+
+	//	return photo, err
+
+	o := orm.NewOrm()
+	photo := new(Photo)
+	qs := o.QueryTable("Photo")
+	err := qs.Filter("id", 1).One(photo)
 	if err != nil {
-		return id, err
+		return nil, err
 	}
-	return id, nil
+	return photo, err
 }
 
-func (m *Photo) Read(fields ...string) error {
-	if err := orm.NewOrm().Read(m, fields...); err != nil {
-		return err
-	}
-	return nil
-}
+func UpdatePhone() {
 
-func (m *Photo) Update(fields ...string) error {
-	if _, err := orm.NewOrm().Update(m, fields...); err != nil {
-		return err
-	}
-	return nil
-}
+	o := orm.NewOrm()
+	//id, _ := strconv.ParseInt("1", 10, 64)
 
-func (m *Photo) Delete() error {
-	if _, err := orm.NewOrm().Delete(m); err != nil {
-		return err
-	}
-	return nil
-}
+	photo := &Photo{Id: 1}
 
-func (m *Photo) Query() orm.QuerySeter {
-	return orm.NewOrm().QueryTable(m)
+	if o.Read(photo) == nil {
+		photo.Des = "ddddddddd"
+		o.Update(photo)
+	}
+
 }
 
 func init() {
