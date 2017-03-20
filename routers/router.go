@@ -9,6 +9,7 @@ import (
 func init() {
 	beego.Router("/", &controllers.MainController{})
 	beego.Router("/home", &controllers.HomeController{})
+	beego.Router("/home/json", &controllers.HomeController{}, "GET:Json")
 	beego.Router("/photo", &controllers.PhotoController{})
 	beego.Router("/photo/update", &controllers.PhotoController{}, "GET:ToUpdate")
 	beego.Router("/photo/select", &controllers.PhotoController{}, "GET:TOSelect")

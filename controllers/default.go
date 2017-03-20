@@ -16,5 +16,5 @@ func (c *MainController) Get() {
 
 	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
 	c.Data["Nums"] = nums
-
+	beego.SetLogger("file", `{"filename":"logs/test.log"}`)
 }
