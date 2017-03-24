@@ -1,0 +1,11 @@
+@charset "utf-8";
+.login-container{width:358px;margin:0px auto;}
+.login-container .mark-box{padding-top:60px;height:170px;text-align:center;}
+.login-container .mark-box .logo{background:url(../images/logo.png) no-repeat center 0;height:82px;display:block;overflow:hidden;margin-bottom:5px;}
+.login-container .mark-box .tit{font-size:24px;color:#34635c;}
+.login-container .operate-box{background:url(../images/login-main-bg.png) no-repeat;width:314px;height:272px;padding:35px 0px 0px 44px;overflow:hidden;}
+.operate-box .tit{color:#7b6644;font-size:14px;font-weight:500;margin-left:5px;}
+.operate-box .iptxt{width:250px;height:36px;padding:0px 10px;border:1px solid #7b6644;border-radius:5px;overflow:hidden;font-size:14px;color:#969696;line-height:40px\9;}
+.operate-box .iptxt:focus{border:1px solid #c96732;}
+.operate-box .submit{background:#457a72;width:270px;height:36px;border:0px none;border-radius:5px;overflow:hidden;font-size:14px;color:#fff;font-weight:400;line-height:40px\9;text-align:center;cursor:pointer;}
+.operate-box .submit:hover{background:#305550;}

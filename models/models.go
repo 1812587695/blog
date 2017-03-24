@@ -16,12 +16,7 @@ type Profile struct {
 	User *User `orm:"reverse(one)"` // 设置反向关系（可选）
 }
 
-type Admin struct {
-	Id  int
-	Age int16
-}
-
 func init() {
 	// 需要在 init 中注册定义的 model
-	orm.RegisterModel(new(User), new(Profile), new(Admin))
+	orm.RegisterModel(new(User), new(Profile))
 }

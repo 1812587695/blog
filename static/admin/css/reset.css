@@ -1,0 +1,18 @@
+@charset "utf-8";
+body{font-family:"Microsoft Yahei",Verdana, Arial, Helvetica, sans-serif;font-size:12px;}
+*{margin:0px;padding:0px;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td, textarea{border:0px none;font-size:12px;font-style:normal;margin:0px;outline:0 none;padding:0px;text-decoration:none;text-align:left;}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ol,ul,li{list-style:outside none none;}
+a{color:#444;}
+a:hover{text-decoration:underline;color:#c40f07;}
+a *{cursor:pointer;}
+a img{border:0px none;}
+.clearfix:after{content:".";display:block;height:0px;font-size:0px;clear:both;visibility:hidden;}
+.clear{zoom:1;}
+.minpad{width:1px;height:10px;display:block;overflow:hidden;clear:both;}
+.h20{height:20px !important;}
+.h30{height:30px !important;}
+a,button,input,li,p,div{-webkit-tap-highlight-color:rgba(255, 0, 0, 0);}
+input{-webkit-appearance:none;}
+input:focus{outline:none;}

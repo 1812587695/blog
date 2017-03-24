@@ -32,17 +32,19 @@ func (this *HomeController) Get() {
 }
 
 func (this *HomeController) Json() {
-	var countryCapitalMap map[string]string
-	/* 创建集合 */
-	countryCapitalMap = make(map[string]string)
+	//	var countryCapitalMap map[string]string
+	//	/* 创建集合 */
+	//	countryCapitalMap = make(map[string]string)
 
-	/* map 插入 key-value 对，各个国家对应的首都 */
-	countryCapitalMap["France"] = "Paris"
-	countryCapitalMap["Italy"] = "Rome"
-	countryCapitalMap["Japan"] = "Tokyo"
-	countryCapitalMap["India"] = "New Delhi"
+	//	/* map 插入 key-value 对，各个国家对应的首都 */
+	//	countryCapitalMap["France"] = "Paris"
+	//	countryCapitalMap["Italy"] = "Rome"
+	//	countryCapitalMap["Japan"] = "Tokyo"
+	//	countryCapitalMap["India"] = "New Delhi"
 
-	this.Data["json"] = &countryCapitalMap
+	a := []int{1, 2, 3, 4, 5}
+
+	this.Data["json"] = &a
 	this.ServeJSON()
 	//	this.ServeXML()
 	//	this.ServeJSONP()

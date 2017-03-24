@@ -2,6 +2,7 @@ package routers
 
 import (
 	"blog/controllers"
+	"blog/controllers/admins"
 
 	"github.com/astaxie/beego"
 )
@@ -15,4 +16,9 @@ func init() {
 	beego.Router("/photo/select", &controllers.PhotoController{}, "GET:TOSelect")
 	beego.Router("/photo/one", &controllers.PhotoController{}, "GET:ToOne")
 	beego.Router("/photo/updates", &controllers.PhotoController{}, "GET:ToUpdates")
+
+	beego.Router("/admin", &admins.IndexController{}, "GET:Getww")
+	beego.Router("/admin/login", &admins.LoginController{}, "GET:Get")
+	beego.Router("/admin/login/post", &admins.LoginController{}, "POST:Post")
+
 }

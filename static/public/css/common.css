@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*jquery.validate*/
+.error{color:#c40000;}
+
+/*caigou module*/
+.cg-product-tr .scale-img{width:100px;height:50px;overflow:hidden;}
+
+#BigPicBox{position:absolute;z-index:99999;}
+#BigPicBox img{border:2px solid #ccc;}
+.table-view-list .label{
+	font-size:12px !important;
+}
+.table-view-list th,.table-view-list .tr-head th,.table-view-list td{
+	white-space:nowrap;
+}
+.table-view-list .short-gname{
+	width:280px;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	cursor:pointer;	
+}
+/*解决批量添加字体小的问题*/
+.edit-batch-list .label{
+	font-size:12px !important;
+}
+.edit-batch-list .ebatch-name{
+	width:280px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	cursor:pointer;
+	vertical-align:middle;
+}
+/*inline转inline-block*/
+.edit-batch-list .ebatch-txt{
+	width:280px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	cursor:pointer;
+	display:inline-block;
+	text-align:left;
+}
+.col-diy-80{
+	width:80%;
+	overflow:hidden;
+}
+.hide{
+    display: none;
+}
+.ajax-loading-dialog{
+	padding:35px;line-height:22px;background-color:#393D49;color:#fff;font-weight:300;font-size:14px;
+}
+/*颜色*/
+.ft-blue{color:#3c8dbc;}

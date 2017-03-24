@@ -23,7 +23,7 @@ func main() {
 	orm.Debug = true
 	// 自动建表
 	// true 改成false，如果表存在则会给出提示，如果改成false则不会提示 ， 这句话没有会报主键不存在的错误
-	orm.RunSyncdb("default", false, true)
+	//	orm.RunSyncdb("default", false, true)
 
 	beego.Run()
 }

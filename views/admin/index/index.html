@@ -1,0 +1,233 @@
+<!-- 头部 -->
+{{template "admin/public/header.html" .}}
+<!-- Left logo -->
+{{template "admin/public/left.html" .}}
+
+
+<!-- 内容页 -->
+<div class="content-wrapper">
+    <!-- 面包屑 -->
+    <section class="content-header">
+        <h1>
+            后台
+            <small>管理</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> 后台管理</a></li>
+            <li class="active">列表</li>
+        </ol>
+    </section>
+
+    <!-- 内容 -->
+    <section class="content">
+        <!-- 内容头部 -->
+        <div class="row" style="display: flex">
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>17</h3>
+                        <p>待回复咨询</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="/Admin/MemberComplain/index.html" class="small-box-footer">马上处理<i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3>59</h3>
+                        <p>待发货订单</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
+                    <a href="/Admin/Orders/orderList.html" class="small-box-footer">马上处理<i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        <h3>17</h3>
+                        <p>待确认结算</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                    <a href="/Admin/Bills/index.html" class="small-box-footer">马上处理 <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3>17</h3>
+                        <p>库存缺货</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">马上处理<i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box" style="background-color: #990099; color:#f9f9f9">
+                    <div class="inner">
+                        <h3>8</h3>
+                        <p>待处理退款</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a href="/Admin/Refund/index/view/1.html" class="small-box-footer">马上处理<i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- 内容2 -->
+        <div class="row">
+            <!-- 内容左边 -->
+            <section class="col-lg-12 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="nav-tabs-custom">
+                    <!-- Tabs within a box -->
+                    <ul class="nav nav-tabs pull-right">
+                        <li class="active"><a href="#revenue-chart" data-toggle="tab">销售额分析</a></li>
+                        <li><a href="#sales-chart" data-toggle="tab">单品销售TOP5</a></li>
+                        <li class="pull-left header"><i class="fa fa-inbox"></i> 运营分析</li>
+                    </ul>
+                    <div class="tab-content no-padding">
+                        <!-- Morris chart - Sales -->
+                        <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 384px;">
+                            <!-- LINE CHART -->
+                            <div class="box box-info">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title"></h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div class="chart" id="line-chart" style="height: 300px;"></div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+                    </div>
+                </div>
+                <!-- /.nav-tabs-custom -->
+
+            </section>
+        </div>
+        <!-- /.row (main row) -->
+
+
+
+        <div class="row">
+            <section class="col-lg-12 connectedSortable">
+                <!-- BAR CHART -->
+                <div class="box box-success">
+                    <div class="box-header with-border">
+                        <h3 class="box-title"><i class="fa fa-inbox"></i> 订单分析</h3>
+                    </div>
+                    <div class="box-body chart-responsive">
+                        <div class="chart" id="bar-chart" style="height: 300px;"></div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </section>
+        </div>
+
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- 底部 -->
+{{template "admin/public/footer.html" .}}
+</div>
+
+
+</body>
+</html>
+
+
+<!-- jQuery 2.2.3 -->
+<script src="/static/public/adminlte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="/static/public/adminlte/bootstrap/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="/static/public/adminlte/plugins/morris/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="/static/public/adminlte/plugins/sparkline/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="/static/public/adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/public/adminlte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="/static/public/adminlte/plugins/knob/jquery.knob.js"></script>
+<!-- daterangepicker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="/static/public/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="/static/public/adminlte/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="/static/public/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="/static/public/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/static/public/adminlte/plugins/fastclick/fastclick.js"></script>
+
+
+<!-- 下面是页面类容js的东西 -->
+<!-- AdminLTE App -->
+<script src="/static/public/adminlte/dist/js/app.min.js"></script>
+<!--<script src="/static/public/adminlte/dist/js/pages/dashboard.js"></script>-->
+
+<script>
+
+    $(function () {
+
+        "use strict";
+
+        // LINE CHART
+        var line = new Morris.Line({
+            element: 'line-chart',
+            resize: true,
+            data: [{"order_day":"2017-02-10","moneys":"0.070"},{"order_day":"2017-02-11","moneys":"0.170"},{"order_day":"2017-02-12","moneys":0},{"order_day":"2017-02-13","moneys":"0.180"},{"order_day":"2017-02-14","moneys":"0.090"},{"order_day":"2017-02-15","moneys":"9.140"},{"order_day":"2017-02-16","moneys":"0.100"},{"order_day":"2017-02-17","moneys":"1.110"},{"order_day":"2017-02-18","moneys":"136.030"},{"order_day":"2017-02-19","moneys":"0.010"},{"order_day":"2017-02-20","moneys":"55.210"},{"order_day":"2017-02-21","moneys":"2.070"},{"order_day":"2017-02-22","moneys":"81.710"},{"order_day":"2017-02-23","moneys":"2.010"},{"order_day":"2017-02-24","moneys":"0.080"},{"order_day":"2017-02-25","moneys":0},{"order_day":"2017-02-26","moneys":0},{"order_day":"2017-02-27","moneys":"0.080"},{"order_day":"2017-02-28","moneys":"0.040"},{"order_day":"2017-03-01","moneys":"0.110"},{"order_day":"2017-03-02","moneys":"0.030"},{"order_day":"2017-03-03","moneys":"0.100"},{"order_day":"2017-03-04","moneys":"1.020"},{"order_day":"2017-03-05","moneys":"0.180"},{"order_day":"2017-03-06","moneys":"0.040"},{"order_day":"2017-03-07","moneys":"9.640"},{"order_day":"2017-03-08","moneys":"2.300"},{"order_day":"2017-03-09","moneys":"1.380"},{"order_day":"2017-03-10","moneys":"0.130"},{"order_day":"2017-03-11","moneys":"0.200"},{"order_day":"2017-03-12","moneys":0},{"order_day":"2017-03-13","moneys":"0.070"},{"order_day":"2017-03-14","moneys":0},{"order_day":"2017-03-15","moneys":0},{"order_day":"2017-03-16","moneys":"1.300"},{"order_day":"2017-03-17","moneys":"2.000"},{"order_day":"2017-03-18","moneys":0},{"order_day":"2017-03-19","moneys":0},{"order_day":"2017-03-20","moneys":"0.020"},{"order_day":"2017-03-21","moneys":0},{"order_day":"2017-03-22","moneys":0},{"order_day":"2017-03-23","moneys":0}],
+            xkey: 'order_day',
+            ykeys: ['moneys'],
+            labels: ['销售额'],
+            lineColors: ['#3c8dbc'],
+            hideHover: 'auto'
+        });
+
+        //Donut Chart
+        var donut = new Morris.Donut({
+            element: 'sales-chart',
+            resize: true,
+            colors: ["#3c8dbc", "#f56954", "#00a65a", "#f39a12", "#00c0ef"],
+            data: [{"label":"\u7897\u4e2d\u5b9d\u73cd\u73e0\u7c73","value":"72"},{"label":"\u4f0a\u5229\u7eaf\u725b\u5976\uff08\u76d2\u88c5\uff09","value":"58"},{"label":"\u8d85\u80fd\u690d\u7fe0\u4f4e\u6ce1\u6d17\u8863\u6db22.5kg","value":"39"},{"label":"\u4e25\u8001\u5927\u957f\u7c92\u9999\u7c73","value":"36"},{"label":"\u6d77\u98de\u4e1d\u53bb\u5c51\u6d17\u53d1\u9732\u6e05\u723d\u53bb\u6cb9\u578b400ml","value":"31"}],
+            hideHover: 'auto'
+        });
+
+        //BAR CHART
+        var bar = new Morris.Bar({
+            element: 'bar-chart',
+            resize: true,
+            data: [{"order_day":"2017-03-14","pays":0,"refunds":0},{"order_day":"2017-03-15","pays":0,"refunds":0},{"order_day":"2017-03-16","pays":"1","refunds":0},{"order_day":"2017-03-17","pays":"1","refunds":0},{"order_day":"2017-03-18","pays":0,"refunds":0},{"order_day":"2017-03-19","pays":0,"refunds":0},{"order_day":"2017-03-20","pays":"1","refunds":0},{"order_day":"2017-03-21","pays":0,"refunds":0},{"order_day":"2017-03-22","pays":0,"refunds":0},{"order_day":"2017-03-23","pays":0,"refunds":0}],
+            barColors: ['#00a65a', '#d3d7df'],
+            xkey: 'order_day',
+            ykeys: ['pays', 'refunds'],
+            labels: ['支付订单', '退款订单'],
+            hideHover: 'auto'
+        });
+    });
+
+</script>

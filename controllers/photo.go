@@ -59,8 +59,9 @@ func (this *PhotoController) ToOne() {
 		beego.Error(err)
 	}
 	//	var a = photo[1:2]
-	fmt.Println(photo)
-
+	//	fmt.Println(photo)
+	this.Ctx.WriteString(fmt.Sprint(photo))
+	return
 	//	this.Ctx.WriteString(photo[0])
 	//	beego.Debug(photo)
 	//	this.TplName = "aa/1.html"
