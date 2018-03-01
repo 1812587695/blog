@@ -17,8 +17,13 @@ func init() {
 	beego.Router("/photo/one", &controllers.PhotoController{}, "GET:ToOne")
 	beego.Router("/photo/updates", &controllers.PhotoController{}, "GET:ToUpdates")
 
-	beego.Router("/admin", &admins.IndexController{}, "GET:Getww")
+	beego.Router("/admin", &admins.IndexController{}, "GET:Get")
 	beego.Router("/admin/login", &admins.LoginController{}, "GET:Get")
 	beego.Router("/admin/login/post", &admins.LoginController{}, "POST:Post")
+	beego.Router("/admin/login/loginOut", &admins.LoginController{}, "get:LoginOut")
+
+	beego.Router("/admin/rbac/user", &admins.RbacController{}, "get:User")
+	beego.Router("/admin/rbac/userAdd", &admins.RbacController{}, "get:UserAdd")
+	beego.Router("/admin/rbac/userSave", &admins.RbacController{}, "post:UserSave")
 
 }

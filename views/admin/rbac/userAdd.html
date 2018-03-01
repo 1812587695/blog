@@ -1,0 +1,91 @@
+<!-- 头部 -->
+{{template "admin/public/header.html" .}}
+<!-- Left logo -->
+{{template "admin/public/left.html" .}}
+
+<!-- 内容页 -->
+<div class="content-wrapper">
+    <!-- 面包屑 -->
+    <section class="content-header">
+        <h1>
+            权限
+            <small>管理</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> 权限管理</a></li>
+            <li class="active">添加用户</li>
+        </ol>
+    </section>
+
+    <!-- 内容 -->
+    <section class="content"><div class="row"><div class="col-md-12">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">添加用户</h3>
+
+                <div class="box-tools">
+
+                    <div class="btn-group pull-right" style="margin-right: 10px">
+                        <a href="/admin/rbac/user.html" class="btn btn-sm btn-default"><i class="fa fa-list"></i>&nbsp;角色列表</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form action="/admin/rbac/userSave.html" method="post" accept-charset="UTF-8" class="form-horizontal" pjax-container="">
+                <div class="box-body">
+                    <div class="form-group 1">
+                        <label for="Name" class="col-sm-2 control-label">登陆用户名称</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                <input type="text" name="name" value="" class="form-control" placeholder="登陆用户名称">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group 1">
+                        <label for="Name" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                <input type="password" name="password" value="" class="form-control" placeholder="密码">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <div class="col-sm-2">
+
+                </div>
+                    <div class="col-sm-6">
+
+                        <div class="btn-group pull-left">
+                            <button type="submit" class="btn btn-info pull-right">提交</button>
+                        </div>
+
+                        <div class="btn-group pull-right">
+                            <input type="reset" class="btn btn-warning" value="重置">
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.box-footer -->
+            </form>
+        </div>
+
+    </div></div>
+
+    </section>
+</div>
+<!-- 底部 -->
+{{template "admin/public/footer.html" .}}
+</div>
+<!-- Bootstrap 3.3.6 -->
+<script src="/static/public/adminlte/bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/static/public/adminlte/dist/js/app.min.js"></script>
+
+</body>
+</html>

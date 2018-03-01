@@ -7,6 +7,8 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 
 	"github.com/astaxie/beego"
+	//	_ "github.com/astaxie/beego/session/mysql"
+	//	_ "github.com/astaxie/beego/session/redis"
 )
 
 func init() {
@@ -15,7 +17,16 @@ func init() {
 	// 注册默认数据库
 	// 我的mysql的root用户密码为root，打算把数据表建立在名为beego数据库里
 	// 备注：此处第一个参数必须设置为“default”（因为我现在只有一个数据库），否则编译报错说：必须有一个注册DB的别名为 default
-	orm.RegisterDataBase("default", "mysql", "root:root@/beego?charset=utf8")
+	orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3307)/beego_blog?charset=utf8")
+
+	//	beego.BConfig.WebConfig.Session.SessionProvider = "file"
+	//	beego.BConfig.WebConfig.Session.SessionProviderConfig = "./tmp"
+
+	//	beego.BConfig.WebConfig.Session.SessionProvider = "mysql"
+	//	beego.BConfig.WebConfig.Session.SessionProviderConfig = "root:root@/beego"
+
+	//	beego.BConfig.WebConfig.Session.SessionProvider = "redis"
+	//	beego.BConfig.WebConfig.Session.SessionProviderConfig = "192.168.0.228:6379"
 }
 
 func main() {

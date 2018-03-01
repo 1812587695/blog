@@ -1,24 +1,14 @@
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] the request url is  /home
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] Handler crashed with error can't find templatefile in the path:views/homecontroller/get.tpl
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/asm_amd64.s:514
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/panic.go:489
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/template.go:73
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:254
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:205
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:185
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/router.go:816
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] D:/Program Files/Go/src/net/http/server.go:2568
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] D:/Program Files/Go/src/net/http/server.go:1825
-2017/03/23 17:10:56 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/asm_amd64.s:2197
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] the request url is  /photo
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] Handler crashed with error can't find templatefile in the path:views/photocontroller/get.tpl
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/asm_amd64.s:514
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/panic.go:489
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/template.go:73
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:254
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:205
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:185
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/router.go:816
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] D:/Program Files/Go/src/net/http/server.go:2568
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] D:/Program Files/Go/src/net/http/server.go:1825
-2017/03/23 17:13:49 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/asm_amd64.s:2197
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] the request url is  /home
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] Handler crashed with error can't find templatefile in the path:views/homecontroller/get.tpl
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/asm_amd64.s:514
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/panic.go:489
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/template.go:73
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:254
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:205
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/controller.go:185
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] C:/Users/Administrator/go/src/github.com/astaxie/beego/router.go:816
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] D:/Program Files/Go/src/net/http/server.go:2568
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] D:/Program Files/Go/src/net/http/server.go:1825
+2017/06/28 10:42:50 [C] [asm_amd64.s:514] D:/Program Files/Go/src/runtime/asm_amd64.s:2197
+2018/03/01 15:23:40.299 [D] [server.go:2619] ::1 - - [01/Mar/2018 03:23:40] "GET / HTTP/1.1 200 0" 0.023001  Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36
+

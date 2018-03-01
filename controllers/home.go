@@ -42,7 +42,8 @@ func (this *HomeController) Json() {
 	//	countryCapitalMap["Japan"] = "Tokyo"
 	//	countryCapitalMap["India"] = "New Delhi"
 
-	a := []int{1, 2, 3, 4, 5}
+	//	a := []int{1, 2, 3, 4, 5}
+	a := map[string]string{"uid": "12", "ss": "333"}
 
 	this.Data["json"] = &a
 	this.ServeJSON()
